@@ -1,15 +1,20 @@
 from dotenv import load_dotenv
 import os
 
+load_dotenv()
+
+cog_endpoint = os.getenv('COG_SERVICE_ENDPOINT')
+cog_key = os.getenv('COG_SERVICE_KEY')
+
+
 # Import namespaces
 
 
 def main():
     try:
         # Get Configuration Settings
-        load_dotenv()
-        cog_endpoint = os.getenv('COG_SERVICE_ENDPOINT')
-        cog_key = os.getenv('COG_SERVICE_KEY')
+        
+        
 
         # Create client using endpoint and key
 
