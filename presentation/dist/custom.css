@@ -1,0 +1,31 @@
+.text-container {
+    background: linear-gradient(to right, #ff9933, #ff3399);
+    background-clip: text;
+    -webkit-background-clip: text; /* for Safari */
+    color: transparent;
+  }
+  
+  .color-change {
+    animation: color-animation 10s ease-in-out infinite;
+  }
+  
+
+
+  @keyframes color-animation {
+    0% {
+      text-shadow: 0 0 5px #ff9933;
+    }
+    25% {
+      text-shadow: 0 0 10px #ff3399;
+    }
+    50% {
+      text-shadow: 0 0 5px #ff9933;
+    }
+    75% {
+      text-shadow: 0 0 15px #ff3399;
+    }
+    100% {
+      text-shadow: 0 0 5px #ff9933;
+    }
+  }
+  
