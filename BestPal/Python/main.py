@@ -31,7 +31,7 @@ def transcribe_command():
     # Configure speech recognition
     audio_config = speech_sdk.AudioConfig(use_default_microphone=True)
     speech_recognizer = speech_sdk.SpeechRecognizer(speech_config, audio_config)
-    print('Speak now... (say quit to stop the programme)')
+    print('Speak now... (say quit to exit)')
 
      # Process speech input
     speech = speech_recognizer.recognize_once_async().get()
@@ -61,7 +61,6 @@ def call_openai(command):
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0.6,
-        stop=[" Human:", " AI:"]
     )
 
     # Print and read aloud answer from openai

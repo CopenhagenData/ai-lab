@@ -11,4 +11,6 @@ urllib
 uuid
 
 # C# packages
-
+Microsoft.CognitiveServices.Speech
+OpenAI-API
+dotenv.net
