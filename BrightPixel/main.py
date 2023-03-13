@@ -26,6 +26,7 @@ def create_image(request, save=True):
     image_url = response['data'][0]['url']
     full_save_path = save_path + f"openai_{uuid4()}.png"
     urllib.request.urlretrieve(image_url, full_save_path)
+    print(f"\nImage created successfully! Saved to: {full_save_path}\n")
     return full_save_path
 
 # Main function
@@ -38,17 +39,9 @@ def main():
         if request == "quit":
             print("Exiting...")
             break
-        elif request == "error":
-            print("Error message: " + error_msg)
 
         # Create image
-        try:
-            create_image(request)
-            print(f"\nImage created successfully! Saved to: {full_save_path}\n")
-        except Exception as e:
-            print("Error creating image - try again")
-            error_msg = str(e)
-            continue
+        create_image(request)  
 
 # Run main
 if __name__ == "__main__":
