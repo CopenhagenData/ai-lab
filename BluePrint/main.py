@@ -8,8 +8,8 @@ from glob import glob
 
 # Get Configuration Settings
 load_dotenv()
-cog_key = os.getenv('COG_SERVICE_KEY')
-cog_region = os.getenv('COG_SERVICE_REGION')
+cog_key = os.getenv('AZURE_COG_KEY')
+cog_region = os.getenv('AZURE_COG_REGION')
 openai_key = os.getenv('OPENAI_API_KEY')
 
 # Configure OpenAI
